@@ -18,6 +18,7 @@ enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
     case delete = "DELETE"
+    case put = "PUT"
 }
 
 extension NetworkEnvironment {
@@ -38,11 +39,13 @@ extension NetworkEnvironment {
 
 enum API {
     case getContacts
+    case putContact
 
     func url(environment: NetworkEnvironment) -> URL? {
         switch self {
         case .getContacts:
             return URL(string: environment.baseUrl() + environment.contactsEndpoint())
+        default: return nil
         }
     }
 }

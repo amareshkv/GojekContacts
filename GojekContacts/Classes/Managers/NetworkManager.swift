@@ -36,4 +36,18 @@ class NetworkManager: ContactsAPI {
             completion(result)
         }
     }
+
+    func updateFavorite(isFavorite: Bool, url: String, completion: @escaping (Result<Contact>) -> Void) {
+        let dictionary: [String: AnyHashable] = [ "favorite": isFavorite ]
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+            let request = Request(method: .put, headers: [:], data: jsonData, api: API.getContacts, environment: environment, url: URL(string: url))
+            WebService.request(request: request) { (result) in
+                completion(result)
+            }
+        } catch let _ {
+            // return error
+
+        }
+    }
 }

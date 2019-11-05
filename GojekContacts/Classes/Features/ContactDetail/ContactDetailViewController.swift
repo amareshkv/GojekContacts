@@ -16,6 +16,7 @@ class ContactDetailViewController: UIViewController {
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var mobileNumbertextField: UITextField!
     @IBOutlet weak var emailextField: UITextField!
+    @IBOutlet weak var favoriteButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +27,11 @@ class ContactDetailViewController: UIViewController {
 
     private func updateUI() {
         if let firstName = contactDetail.firstName, let lastName = contactDetail.lastName {
-            contactNameLabel.text = "\(String(describing: firstName)) \(lastName)"
+            contactNameLabel.text = "\(firstName) \(lastName)"
         }
         mobileNumbertextField.text = contactDetail.phoneNumber
         emailextField.text = contactDetail.email
+        favoriteButton.setImage( contactDetail.favorite ? #imageLiteral(resourceName: "favorite-icon-rounded-on") : #imageLiteral(resourceName: "favorite-icon-rounded-off"), for: .normal)
     }
 
     private func getContactDetail() {
@@ -49,4 +51,25 @@ class ContactDetailViewController: UIViewController {
         }
     }
 
+}
+
+
+extension ContactDetailViewController {
+    @IBAction func favoritePressed(_ sender: UIButton?) {
+        guard let url = contact.url else {
+            return
+        }
+        let favorite = !self.contactDetail.favorite
+        NetworkManager.shared.updateFavorite(isFavorite: favorite, url: url) { (result) in
+            switch result {
+            case .success(_):
+                self.contactDetail.favorite = favorite
+                DispatchQueue.main.async {
+                    self.updateUI()
+                }
+            case .failure(let error):
+                break
+            }
+        }
+    }
 }

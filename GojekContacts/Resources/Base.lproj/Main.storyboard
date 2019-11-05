@@ -148,6 +148,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhU-w7-tDA">
                                         <rect key="frame" x="309" y="297" width="44" height="44"/>
                                         <state key="normal" image="favorite-icon-rounded-off"/>
+                                        <connections>
+                                            <action selector="favoritePressed:" destination="qlq-7S-99x" eventType="touchUpInside" id="Fdd-4Y-7aM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.17257003682871427" green="0.78039215689999997" blue="0.27978463490003291" alpha="0.80919894366197187" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,6 +218,7 @@
                     <connections>
                         <outlet property="contactNameLabel" destination="OiV-lO-RaJ" id="TwW-Kn-UFB"/>
                         <outlet property="emailextField" destination="wB2-bb-CGk" id="O2s-RS-qQy"/>
+                        <outlet property="favoriteButton" destination="MhU-w7-tDA" id="Fk6-dp-njN"/>
                         <outlet property="mobileNumbertextField" destination="AFf-Is-y8v" id="F7d-yt-3Iy"/>
                     </connections>
                 </viewController>

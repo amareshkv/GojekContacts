@@ -46,8 +46,9 @@ class WebService {
                 DispatchQueue.main.async {
                     completion(.success(result: responseObject))
                 }
-            } catch _ {
-
+            } catch let exception {
+                print("Exception \(exception)")
+                completion(.success(result: nil))
             }
         }
         dataTask.resume()
