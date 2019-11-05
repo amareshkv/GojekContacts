@@ -19,7 +19,7 @@ class WebService {
     // Create UrlRequest and call dataTask from URLSession
     class func request<T: Codable>(request: Request, completion: @escaping (Result<T>) -> ()) {
         // 2.
-        guard let url = request.api.url(environment: request.environment) else {
+        guard let url = request.url else {
             return
         }
         var urlRequest = URLRequest(url: url)

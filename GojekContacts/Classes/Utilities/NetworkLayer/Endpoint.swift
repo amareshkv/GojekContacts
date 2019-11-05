@@ -54,5 +54,6 @@ struct Request {
     var data: Data?
     var api: API!
     var environment: NetworkEnvironment!
+    var url: URL?
 }
 

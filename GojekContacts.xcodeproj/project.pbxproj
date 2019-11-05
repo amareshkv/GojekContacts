@@ -20,6 +20,7 @@
 		E911BBC123609CFC002B8F2D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911BBC023609CFC002B8F2D /* Contact.swift */; };
 		E911BBC323609DB2002B8F2D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911BBC223609DB2002B8F2D /* NetworkManager.swift */; };
 		E911BBC623657BF0002B8F2D /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911BBC523657BF0002B8F2D /* HomeTableViewCell.swift */; };
+		E9D3D770237056E800F261BC /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3D76F237056E800F261BC /* ContactDetailViewController.swift */; };
 		E9FBC2D223657F7500132AD4 /* UtilityAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC2D123657F7500132AD4 /* UtilityAlert.swift */; };
 		E9FBC2D423657F7F00132AD4 /* UtilityTopRootVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBC2D323657F7E00132AD4 /* UtilityTopRootVc.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		E911BBC023609CFC002B8F2D /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		E911BBC223609DB2002B8F2D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E911BBC523657BF0002B8F2D /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		E9D3D76F237056E800F261BC /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		E9FBC2D123657F7500132AD4 /* UtilityAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityAlert.swift; sourceTree = "<group>"; };
 		E9FBC2D323657F7E00132AD4 /* UtilityTopRootVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityTopRootVc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				E911BBC423657BD8002B8F2D /* Home */,
+				E9D3D76E237056CD00F261BC /* ContactDetail */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -185,6 +188,14 @@
 				E911BBC523657BF0002B8F2D /* HomeTableViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		E9D3D76E237056CD00F261BC /* ContactDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E9D3D76F237056E800F261BC /* ContactDetailViewController.swift */,
+			);
+			path = ContactDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 				E911BBAC23608EA5002B8F2D /* HomeViewController.swift in Sources */,
 				E911BBC623657BF0002B8F2D /* HomeTableViewCell.swift in Sources */,
 				E911BBBD23609465002B8F2D /* Endpoint.swift in Sources */,
+				E9D3D770237056E800F261BC /* ContactDetailViewController.swift in Sources */,
 				E911BBC123609CFC002B8F2D /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

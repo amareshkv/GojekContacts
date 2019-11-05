@@ -39,6 +39,7 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
 }
 
 
@@ -61,6 +62,15 @@ extension HomeViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 66
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contact = contactsArray[indexPath.row]
+        guard let controller = self.storyboard?.instantiateViewController(identifier: "ContactDetailViewController") as? ContactDetailViewController else {
+            fatalError("controller not instantiated")
+        }
+        controller.contact = contact
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 

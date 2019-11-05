@@ -15,6 +15,8 @@ struct Contact: Codable {
     var profilePicURL: String?
     var favorite: Bool
     var url: String?
+    var email: String?
+    var phoneNumber: String?
 
     enum CodingKeys: String, CodingKey {
         case firstName = "first_name"
@@ -23,5 +25,7 @@ struct Contact: Codable {
         case favorite
         case url
         case id
+        case email
+        case phoneNumber = "phone_number"
     }
 }
